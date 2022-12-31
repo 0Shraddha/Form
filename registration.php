@@ -17,6 +17,7 @@ if(isset($_POST['create'])){
 		$result = $stmtinsert->execute([$firstname, $lastname, $email, $phonenumber, $password]);
 		if($result){
 			echo 'Successfully saved.';
+			header("location:index.php");
 		}else{
 			echo 'There were erros while saving the data.';
 		}
