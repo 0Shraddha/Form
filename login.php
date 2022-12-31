@@ -20,7 +20,7 @@ if (isset($_POST['firstname']) && isset($_POST['password'])) {
 
     $uname = validate($_POST['firstname']);
 
-    $pass = validate($_POST['password']);
+    $pass = sha1(validate($_POST['password']));
 
     if (empty($uname)) {
 
